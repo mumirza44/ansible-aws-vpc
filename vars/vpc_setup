@@ -18,8 +18,8 @@ region: "me-south-1"
 
 # Zone Names
 
-zone1: mes1-az1
-zone2: mes1-az2
-zone3: mes1-az3
+zone1: me-south-1a
+zone2: me-south-1b
+zone3: me-south-1c
 
 state: present
