@@ -9,10 +9,7 @@
 
      - name: Import vprofile setup Variable
        include_vars: vars/vprostacksetup
-
-     - name: Import vpc vars
-       include_vars: vars/vpc_setup
-
+       
      - name: Create vprofile ec2 key
        ec2_key:
           name: "{{region}}"

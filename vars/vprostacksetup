@@ -4,3 +4,4 @@ memcache_ami: ami-0729e439b6769d6ab
 rmq_ami: ami-0729e439b6769d6ab
 mysql_ami: ami-0729e439b6769d6ab
 
+region: "us-east-1"
