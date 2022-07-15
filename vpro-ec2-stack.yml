@@ -73,8 +73,8 @@
                 group_id: "{{vproStackSG_out.group_id}}"
 
 
-      - name: Creating Nginx web01
-        ec2:
+     - name: Creating Nginx web01
+       ec2:
            key_name: vprokey
            region: "{{region}}"
            instance_type: t2.micro
@@ -92,10 +92,10 @@
                Owner: DevOps Team 
            group_id: "{{vproStackSG_out.group_id}}"
            vpc_subnet_id: "{{privsub1id}}"
-        register: web01_out
+       register: web01_out
              
-      - name: Creating tomcat app01
-        ec2:
+     - name: Creating tomcat app01
+       ec2:
            key_name: vprokey
            region: "{{region}}"
            instance_type: t2.micro
@@ -113,10 +113,10 @@
                Owner: DevOps Team 
            group_id: "{{vproStackSG_out.group_id}}"
            vpc_subnet_id: "{{privsub1id}}"
-        register: app01_out       
+       register: app01_out       
 
-      - name: Creating memcache mc01
-        ec2:
+     - name: Creating memcache mc01
+       ec2:
            key_name: vprokey
            region: "{{region}}"
            instance_type: t2.micro
@@ -134,11 +134,11 @@
                Owner: DevOps Team 
            group_id: "{{vproStackSG_out.group_id}}"
            vpc_subnet_id: "{{privsub1id}}"
-        register: mc01_out  
+       register: mc01_out  
 
 
-      - name: Creating RabbitMQ rmq01
-        ec2:
+     - name: Creating RabbitMQ rmq01
+       ec2:
            key_name: vprokey
            region: "{{region}}"
            instance_type: t2.micro
@@ -156,11 +156,11 @@
                Owner: DevOps Team 
            group_id: "{{vproStackSG_out.group_id}}"
            vpc_subnet_id: "{{privsub1id}}"
-        register: rmq01_out    
+       register: rmq01_out    
 
 
-      - name: Creating mysql db01
-        ec2:
+     - name: Creating mysql db01
+       ec2:
            key_name: vprokey
            region: "{{region}}"
            instance_type: t2.micro
@@ -178,10 +178,9 @@
                Owner: DevOps Team 
            group_id: "{{vproStackSG_out.group_id}}"
            vpc_subnet_id: "{{privsub1id}}"
-        register: db01_out   
+       register: db01_out   
 
 
-      - debug:
+     - debug:
            var: db01_out
 
-...
