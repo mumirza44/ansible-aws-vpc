@@ -14,12 +14,16 @@ PrivSub2Cidr: 172.20.5.0/24
 PrivSub3Cidr: 172.20.6.0/24
 
 # Region Name
-region: "me-south-1"
+region: "us-east-1"
 
 # Zone Names
 
-zone1: me-south-1a
-zone2: me-south-1b
-zone3: me-south-1c
+zone1: us-east-1a
+zone2: us-east-1b
+zone3: us-east-1c
 
 state: present
+
+#Bastion Vars
+bastion_ami: ami-0bf69afb300c322eb
+MYIP: 
